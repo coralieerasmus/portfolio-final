@@ -1,111 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="index.css" type="text/css" rel="stylesheet">
-  <title>Coralie Erasmus</title>
-</head>
-
-<body style="background-image:url('img/backgrounds/fixed-background.png');">
-    <header>
-        <div class="wrapHead">
-            <div class="name-container">
-                <div class="name"></div>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link href = "style.css"
+        type = "text/css"
+        rel = "stylesheet" >
+        <title>My Pokemon Game</title>
+    </head>
+    <body>
+        <div id="app">
+            <button id="loadButton">Load Pokémon</button>
+            <div id="pokemonDisplay"></div>
+            <div id="modal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="battleResultText"></p>
             </div>
-            <nav class="nav-bar">
-                <a href="#learning-outcomes">Learning Outcomes</a>
-                <a href="#about">About Me</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="section" id="learning-outcomes">
-        <div class="image-container">
-            <!-- Image 1 -->
-            <div class="image-wrapper">
-                <a href="lo1.html"><img src="img/polaroids/learning-outcome-1.png" alt="Image 1"></a>
-                <p>Interactive
-                </p>
             </div>
-            <!-- Image 2 -->
-            <div class="image-wrapper">
-                <a href="lo2.html"><img src="img/polaroids/learning-outcome-2.png" alt="Image 2"></a>
-                <p>Development</p>
             </div>
-            <!-- Image 3 -->
-            <div class="image-wrapper">
-                <a href="lo3.html"><img src="img/polaroids/learning-outcome-3.png" alt="Image 3"></a>
-                <p>Iterative</p>
-            </div>
-            <!-- Image 4 -->
-            <div class="image-wrapper">
-                <a href="lo4.html"><img src="img/polaroids/learning-outcome-4.png" alt="Image 4"></a>
-                <p>Professional</p>
-            </div>
-            <!-- Image 5 -->
-            <div class="image-wrapper">
-                <a href="lo5.html"><img src="img/polaroids/learning-outcome-5.png" alt="Image 5"></a>
-                <p>Personal</p>
-            </div>
-        </div>
-        <div class="more-info">
-            <div class="overlay">
-            <h2>Want more information?</h2>
-            <button><a class="button" href="documents/Learning outcomes.pdf" target="_blank">Download PDF</a></button>
-        </div>
-            <img src="img/polaroids/spiral.png" alt="Image 6"></a>
-        </div>
-    </div>
-
-    <div class="section about" id="about">
-        <div class="color-box">
-            <h2>HERE IS A BIT ABOUT ME</h2>
-            <!--area 1 text-->
-            <div class="content content--home">
-                <h4>i come from a teensy weensy little island in the caribbean, Aruba</h4>
-                <!--area 1 images-->
-                <div class="images">
-                    <img class="image image--polaroid" src="img/polaroids/dosplaya-polaroid.png">
-                    <img class="image image--polaroid" src="img/polaroids/pelican-polaroid.png">
-                </div>
-            </div>
-            <!---area 2 text-->
-            <div class="content content--profession">
-                <h5>im currently a media & design student trying to build a portfolio.
-                    ive always been someone that likes creating things, and i’ve always loved anything to do with art.
-                </h5>
-                <!--are 2 image-->
-                <div class="images">
-                    <img class="image image--polaroid2" src="img/polaroids/marriott-polaroid.png">
-                </div>
-            </div>
-            <!---area 3 text-->
-            <div class="content content--expectations">
-                <h6>what you can expect from me on here is a gallery of everything i have made including projects i’ve
-                    done.
-                    Including all the pictures seen here.</h6>
-            </div>
-            <!--area 3 images-->
-            <div class="content content--note">
-                <img src="img/polaroids/about-me-note.png">
-            </div>
-            <div class="naturalpool">
-                <img src="img/polaroids/naturalpool-polaroid.png">
-            </div>
-            <div class="andicuri">
-                <img src="img/polaroids/andicuri-polaroid.png">
-            </div>
-        </div>
-    </div>
-
-    <div class="section contact" id="contact">
-        <h2>Let's Get In Touch!</h2>
-        <button><a class="button" href="mailto:coralierasmus@gmail.com">Say hello</a></button>
-        <img src="img/polaroids/boat.png">
-    </div>
-    <script src="index.js"></script>
-</body>
-
-</html>
+            
+            <script src="script.js"></script>
+        </body>
+        </html>

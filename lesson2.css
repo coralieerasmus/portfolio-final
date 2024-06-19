@@ -1,0 +1,125 @@
+body {
+  background-color: #ffccff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.jigglypuff {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.head {
+  width: 200px;
+  height: 200px;
+  background-color: #ffcccc;
+  border-radius: 50%;
+  position: relative;
+}
+
+.left-ear, .right-ear {
+  width: 80px;
+  height: 100px;
+  background-color: #ffcccc;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+}
+
+.left-ear {
+  left: 10px;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.right-ear {
+  right: 10px;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.eyes {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left-eye, .right-eye {
+  width: 40px;
+  height: 40px;
+  background-color: #3399ff;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.left-eye {
+  left: -50px;
+}
+
+.right-eye {
+  right: -50px;
+}
+
+.pupil {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shine {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.mouth {
+  width: 80px;
+  height: 20px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hand {
+  width: 40px;
+  height: 80px;
+  background-color: #ffcccc; /* Pink color */
+  border-radius: 10px;
+  position: absolute;
+  top: 160px; /* Adjusted hand position */
+  left: 80px; /* Adjusted hand position */
+  transform: rotate(-20deg); /* Adjusted hand rotation */
+  z-index: -1; /* Placed behind other elements */
+}
+
+.microphone {
+  width: 20px;
+  height: 100px;
+  background-color: #000; /* Black color */
+  position: absolute;
+  top: 100px; /* Adjusted microphone position */
+  left: 100px; /* Adjusted microphone position */
+  transform: rotate(-45deg); /* Adjusted microphone rotation */
+  z-index: -1; /* Placed behind other elements */
+}
+  
+  
+  

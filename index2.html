@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket.io Chat App</title>
+    <style>
+        /* Basic reset and full height layout */
+        html, body {
+            margin: 0;
+            height: 100%;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #e5ddd5;
+        }
+
+        /* Chat container styling */
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        /* Messages list styling */
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            flex-grow: 1;
+            padding: 8px 10px;
+        }
+
+        /* Individual message styling */
+        #messages li {
+            margin-bottom: 12px;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 7.5px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+
+        /* Align messages */
+        #messages li:nth-child(odd) {
+            background-color: #dcf8c6; /* Light green, for messages from the user */
+            margin-left: auto; /* Align to the right */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 98%;
+            box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Input field styling */
+        form input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px;
+            border-radius: 18px;
+            margin-right: 8px;
+        }
+
+        /* Send button styling */
+        form button {
+            padding: 10px 20px;
+            background-color: #34b7f1; /* WhatsApp Blue */
+            border: none;
+            color: white;
+            border-radius: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <ul id="messages"></ul>
+        <form action="">
+            <input id="m" autocomplete="off" placeholder="Type a message"/>
+            <button>Send</button>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            var socket = io();
+            $('form').submit(function(e) {
+                e.preventDefault();
+                socket.emit('chat message', $('#m').val());
+                $('#m').val('');
+                return false;
+            });
+            socket.on('chat message', function(msg){
+                $('#messages').append($('<li>').text(msg));
+                window.scrollTo(0, document.body.scrollHeight);
+            });
+        });
+    </script>
+</body>
+</html>
