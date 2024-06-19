@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: League Spartan Regular;
+    src: url(fonts/LeagueSpartan-Regular.ttf);
+}
+@font-face {
+    font-family: League Spartan Med;
+    src: url(fonts/LeagueSpartan-Medium.ttf);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.name-container {
+  flex: 1;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-family: Raleway;
+}
+
+.nav-bar a:hover {
+  color: #007BFF;
+}
+
+.name-container {
+  position: absolute;
+  width: 26vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  /* Final horizontal position */
+  top: 0;
+  /* Final vertical position */
+}
+
+.name {
+  position: absolute;
+  width: 26vw;
+  /* Initial width */
+  height: 10vh;
+  /* Initial height */
+  background-image: url('img/polaroids/big-name.png');
+  /* Specify your image URL */
+  background-size: contain;
+  /* Make the background image responsive */
+  background-repeat: no-repeat;
+  /* Prevent image duplication */
+}
+
+ /* Adjusted positioning for the navigation bar */
+ .nav-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+:root {
+  --bg: #fff;
+  --text: #7288a2;
+  --gray: #4d5974;
+  --lightgray: #e5e5e5;
+  --blue: #03b5d2;
+  --highlight-dark-blue: #00008b;
+  --highlight-bright-blue: #00f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Garamond;
+  color: black;
+  display: flex;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+
+.container {
+  margin: 0;
+  padding: 2rem;
+  width: 40%;
+  margin-top: 8vw;
+  margin-left: 4vw;
+}
+
+h2 {
+ font-family: League Spartan Med;
+}
+
+h3{
+    font-family: League Spartan Regular;
+}
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid #A78096;
+  }
+  button[aria-expanded='true'] {
+    border-bottom: 1px solid #A78096;
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #101010;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  button:hover, button:focus {
+    cursor: pointer;
+    color: #A78096;
+  }
+  button:hover .icon, button:focus .icon {
+    cursor: pointer;
+    color: #A78096;
+    border: 1px solid #A78096;
+  }
+  .accordion-title {
+    padding: 1em 1.5em 1em 0;
+    font-family: Garamond;
+  }
+  .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+  }
+  .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+  .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  }
+  button[aria-expanded='true'] {
+    color: #A78096;
+  }
+  button[aria-expanded='true'] .icon::after {
+    width: 0;
+  }
+  button[aria-expanded='true'] + .accordion-content {
+    opacity: 1;
+    max-height: 70em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    height: auto;
+  }
+
+  .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+  }
+}
+
+.highlight {
+  color: black;
+  cursor: pointer;
+  background-color: #c599b2;
+}
+
+.highlight.selected {
+  color: var(--highlight-bright-blue);
+}
+
+#image-container {
+  margin-left: auto;
+  margin-right: 2rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+    position: absolute;
+    top: 60%;
+    right: 15vw;
+    transform: translateY(-50%);
+    display: none;
+    padding-top:15vw ;
+}
+
+.popup img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 40vw;
+    height: auto;
+}
+

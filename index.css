@@ -1,0 +1,418 @@
+/* Ensure these styles are at the bottom of your existing CSS to prevent conflicts */
+@font-face {
+  font-family: Raleway;
+  src: url(fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: League Spartan Med;
+  src: url(fonts/LeagueSpartan-Medium.ttf);
+}
+
+@font-face {
+  font-family: Zen Old Micho;
+  src: url(fonts/ZenOldMincho-Regular.ttf);
+}
+
+/* Adjust the background */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2vw;
+  background-color: #D9D2BE;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.name-container {
+  flex: 1;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1vw;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2vw; /* Responsive font size */
+  transition: color 0.3s;
+  font-family: Raleway;
+}
+
+.nav-bar a:hover {
+  color: #007BFF;
+}
+
+.section {
+  width: 100%;
+  padding: 2vw;
+  /* Adjusted padding for all sections */
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-top: -0.75vw;
+}
+
+.image-wrapper {
+  text-align: center;
+  flex: 1;
+  max-width: 12vw;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  transition: transform .3s ease-in-out;
+}
+
+.image-wrapper img:hover {
+  transform: translateY(-2vw);
+}
+
+.image-wrapper:nth-child(1) {
+  --horizontal-offset: -30vw;
+  --vertical-offset: 0px;
+}
+
+.image-wrapper:nth-child(2) {
+  --horizontal-offset: -15vw;
+  --vertical-offset: 20px;
+}
+
+.image-wrapper:nth-child(3) {
+  --horizontal-offset: 0vw;
+  --vertical-offset: 0px;
+}
+
+.image-wrapper:nth-child(4) {
+  --horizontal-offset: 15vw;
+  --vertical-offset: 20px;
+  width: 369px;
+}
+
+.image-wrapper:nth-child(5) {
+  --horizontal-offset: 30vw;
+  --vertical-offset: 0px;
+}
+
+.image-container .image-wrapper:nth-child(2),
+.image-container .image-wrapper:nth-child(4) {
+  margin-top: 5vw;
+}
+
+.about,
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4vw;
+}
+
+.name-container {
+  position: absolute;
+  width: 26vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+}
+
+.name {
+  position: absolute;
+  width: 26vw;
+  height: 10vh;
+  background-image: url('img/polaroids/big-name.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.image-container p {
+  margin-top: 5px;
+  font-size: 2vw;
+  color: #EBE4CD;
+  font-family: Sahitya;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #EBE4CD;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 1.5vw;
+  right: 1.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1vw;
+}
+
+#learning-outcomes {
+  margin-top: 0vw;
+}
+
+#about {
+  background-size: cover;
+  background-position: center;
+}
+
+#contact {
+  background-size: contain;
+}
+
+h2 {
+  font-family: "Zen Old Mincho";
+  letter-spacing: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 45vw;
+  height: auto;
+  text-align: center;
+  font-size: 4vw;
+  color: black;
+}
+
+h4 {
+  font-family: "Garamond";
+  width: 40vw;
+  margin-left: 5vw;
+  margin-right: auto;
+  text-align: left;
+  display: block;
+  color: black;
+  font-size: 2.5vw;
+}
+
+h5 {
+  font-family: "Garamond";
+  width: 35vw;
+  margin-top: 6vw;
+  margin-left: 13vw;
+  margin-right: auto;
+  text-align: left;
+  display: block;
+  color: black;
+  font-size: 2.3vw;
+}
+
+h6 {
+  font-family: "Garamond";
+  width: 55vw;
+  margin-left: 3vw;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+  color: black;
+  font-size: 2.5vw;
+}
+
+.color-box {
+  background-image: url(img/backgrounds/paper-background-2.jpg);
+  padding: 2vw;
+  max-width: 60vw;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: auto;
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5vw;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+}
+
+.content {
+  display: block;
+  position: relative;
+}
+
+.content--home .images {
+  right: 0;
+  top: 0;
+}
+
+.content--profession .images {
+  left: 0;
+  bottom: 0;
+}
+
+.content--home .image:nth-child(1) {
+  position: absolute;
+  right: 4vw;
+  top: -12vw;
+  transform: rotate(8deg);
+  transition: transform .5s ease-in-out;
+}
+
+.content--home .image:nth-child(2) {
+  position: absolute;
+  transform: rotate(-9deg);
+  right: -4vw;
+  top: -7vw;
+  transition: transform .5s ease-in-out;
+}
+
+.content--home .image:nth-child(1):hover {
+  transform: rotate(12deg);
+}
+
+.content--home .image:nth-child(2):hover {
+  transform: rotate(-13deg);
+}
+
+.images {
+  position: absolute;
+}
+
+.image {
+  height: auto;
+  max-width: 12vw;
+}
+
+.image--polaroid2 {
+  height: auto;
+  max-width: 12vw;
+  margin-left: -4vw;
+  transform: rotate(24.08deg);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+  transition: transform .5s ease-in-out;
+}
+
+.image--polaroid2:hover {
+  transform: rotate(30deg);
+}
+
+.content--note img {
+  position: absolute;
+  max-width: 40vw;
+  left: 2vw;
+  top: -4vw;
+  filter: saturate(-15);
+}
+
+.naturalpool img {
+  height: auto;
+  max-width: 12vw;
+  margin-left: 45vw;
+  top: -90vw;
+  transform: rotate(9deg);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+  transition: transform .7s ease-in-out;
+}
+
+.naturalpool img:hover {
+  transform: rotate(12deg);
+}
+
+.andicuri img {
+  height: auto;
+  max-width: 12vw;
+  margin-left: 54vw;
+  margin-top: -1000vh;
+  transform: rotate(-3deg);
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+  transition: transform .7s ease-in-out;
+}
+
+.andicuri img:hover {
+  transform: rotate(-6deg);
+}
+
+.section .contact,
+button {
+  border-radius: 50px;
+  width: 10vw;
+  background-color: #939D8E;
+  border: none;
+  height: 2vw;
+}
+
+.section .contact,
+h2 {
+  font-family: Zen Old Micho;
+}
+
+.section .contact,
+button,
+a {
+  font-family: League Spartan Med;
+  color: #EBE4CD;
+  font-size: 1.3vw;
+}
+
+.section .contact,
+img {
+  width: 40vw;
+  margin-top: 5vw;
+}
+
+.more-info {
+  position: relative;
+  text-align: center;
+}
+
+.more-info .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white; /* Ensure the text is visible on the image */
+}
+
+.more-info h2 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 3vw; /* Responsive font size */
+}
+
+.more-info button {
+  margin: 10px 0;
+  text-decoration: none;
+  color: white;
+  background-color: #A78096;
+  padding: 2vw;
+  border-radius: 50px;
+  width: 12vw;
+  height: 3vw;
+  display: inline-block;
+}
+
+.more-info button:hover {
+  background-color: #a37a91;
+}
+
+.more-info img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
